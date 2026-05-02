@@ -14,7 +14,7 @@ const program = new Command();
 
 program
   .name('capsule-context')
-  .description('Capsule Nexus - Persistent project context and architectural mapping for AI assistants')
+  .description('FluxTrail - Persistent project context and architectural mapping for AI assistants')
   .version('1.0.0');
 
 program

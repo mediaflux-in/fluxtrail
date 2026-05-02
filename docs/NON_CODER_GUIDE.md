@@ -1,9 +1,9 @@
-# Simple Guide: Using Capsule Context
+# Simple Guide: Using FluxTrail
 
-This guide is for everyone—you don't need to be a coder to use Capsule Context.
+This guide is for everyone—you don't need to be a coder to use FluxTrail.
 
 ## What is this?
-Think of Capsule Context as a **"Memory Card"** for your AI. When you stop talking to the AI and come back later, the AI normally forgets what you were doing. This tool saves your work so the AI remembers.
+Think of FluxTrail as a **"Memory Card"** for your AI. When you stop talking to the AI and come back later, the AI normally forgets what you were doing. This tool saves your work so the AI remembers.
 
 ## How to use it (3 Easy Steps)
 

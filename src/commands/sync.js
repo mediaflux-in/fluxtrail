@@ -41,8 +41,9 @@ export async function sync(summary, options) {
     // 5. Final hardening: protected staged files
     await gitShield();
 
-    success('Capsule Nexus sync completed: Architecture, Task Context, and AI Instructions are now in tact.');
-  } catch (err) {
+    success('FluxTrail sync completed: Architecture, Task Context, and AI Instructions are now in tact.');
+    } catch (err) {
+
     error(`Sync failed: ${err.message}`);
   }
 }

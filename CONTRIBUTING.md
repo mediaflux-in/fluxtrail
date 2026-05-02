@@ -1,13 +1,13 @@
-# Contributing to Capsule Nexus
+# Contributing to FluxTrail
 
-Thank you for your interest in contributing to Capsule Nexus! We welcome contributions that help make AI-assisted development more continuous and contextual.
+Thank you for your interest in contributing to FluxTrail! We welcome contributions that help make AI-assisted development more continuous and contextual.
 
 ## 🛠 Setup
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/capsule-context-cli.git
-    cd capsule-context-cli
+    git clone https://github.com/your-username/fluxtrail.git
+    cd fluxtrail
     ```
 
 2.  **Install dependencies:**

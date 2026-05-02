@@ -1,4 +1,4 @@
-# Capsule Nexus
+# FluxTrail
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js](https://img.shields.io/badge/Node.js-%3E%3D18.0.0-green.svg)](https://nodejs.org/)
@@ -6,16 +6,25 @@
 [![Local-First](https://img.shields.io/badge/Privacy-Local--First-blue.svg)]()
 [![Graphify-Compatible](https://img.shields.io/badge/Graphify-Compatible-orange.svg)](https://github.com/safishamsi/graphify)
 
-**Persistent context for your projects. One brain, one memory, zero amnesia.**
+**FluxTrail is an open-source, local-first project memory and handoff trail for AI coding assistants.**
 
-Capsule Nexus is a local-first CLI tool designed to maintain project continuity across different AI assistants (Gemini CLI, Claude Code, and Codex). It ensures that when you switch tools or reboot your PC, your AI knows exactly where you left off.
+FluxTrail is a local-first CLI tool (command: `capsule-context`) designed to maintain project continuity across different AI assistants (Gemini CLI, Claude Code, and Codex). It ensures that when you switch tools or reboot your PC, your AI knows exactly where you left off.
 
-## 🚀 Why Capsule Nexus?
+## 🚀 Why FluxTrail?
 
-- **Solves Context Amnesia:** LLMs are stateless. Capsule provides a "Save Game" for your dev sessions.
+- **Solves Context Amnesia:** LLMs are stateless. FluxTrail provides a "Save Game" for your dev sessions.
 - **Unified Brain:** Integrates with `graphify` to provide architectural insights (God Nodes, Communities) to your AI.
 - **Local-First & Free:** 100% private. Runs on your CPU. 0 tokens for architecture mapping.
 - **Indestructible:** Built to survive reboots, cache clearing, and power cuts using Git-backed persistence.
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/your-username/fluxtrail.git
+cd fluxtrail
+npm install
+npm link
+```
 
 ## 🛠 Usage
 
@@ -52,18 +61,18 @@ capsule-context sync "Completed API integration"
 
 ## 🧠 AI Compatibility
 
-Capsule Nexus supports specialized adapters for:
+FluxTrail supports specialized adapters for:
 - **Gemini CLI:** Updates `GEMINI.md`
 - **Claude Code:** Updates `CLAUDE.md`
 - **Codex / general agents:** Updates `AGENTS.md`
 
 ## 🔗 Relationship with Graphify
 
-Capsule Nexus is designed to work in tandem with [Graphify](https://github.com/safishamsi/graphify):
+FluxTrail is designed to work in tandem with [Graphify](https://github.com/safishamsi/graphify):
 - **Graphify** is the specialized engine that builds the 3D project map and architectural report.
-- **Capsule Nexus** is the context manager that handles task handoffs, memory persistence, and multi-CLI synchronization.
-- Capsule Nexus can **import** Graphify outputs to give your AI "Architectural Awareness."
-- Capsule Nexus does **not** replace Graphify; it bridges its insights into your AI workflow.
+- **FluxTrail** is the context manager that handles task handoffs, memory persistence, and multi-CLI synchronization.
+- FluxTrail can **import** Graphify outputs to give your AI "Architectural Awareness."
+- FluxTrail does **not** replace Graphify; it bridges its insights into your AI workflow.
 
 ## 🛡 Privacy & Local-First
 

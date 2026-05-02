@@ -1,9 +1,9 @@
-# Architecture: Capsule Context CLI (Capsule Nexus)
+# Architecture: FluxTrail
 
-This document explains the internal design and data flow of the Capsule Context system.
+This document explains the internal design and data flow of the FluxTrail system.
 
 ## Overview
-Capsule Context is a "Repo-First" context management system. It ensures that AI agents (Gemini, Claude, Codex) maintain a shared "long-term memory" and "architectural brain" directly within the project they are working on.
+FluxTrail is a "Repo-First" context management system. It ensures that AI agents (Gemini, Claude, Codex) maintain a shared "long-term memory" and "architectural brain" directly within the project they are working on.
 
 ## Core Layers
 
@@ -58,8 +58,8 @@ project-root/
 ```
 
 ## Privacy & Local-First
-Everything in Capsule Context stays on your machine.
-- No SaaS dependencies.
+Everything in FluxTrail stays on your machine.
+- No cloud dependencies.
 - No database required.
-- No cloud sync.
+- No remote sync.
 - 0 tokens used for core architecture mapping.

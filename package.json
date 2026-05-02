@@ -1,7 +1,7 @@
 {
-  "name": "capsule-context-cli",
+  "name": "fluxtrail",
   "version": "1.0.0",
-  "description": "Capsule Nexus: Persistent project context and architectural mapping for AI assistants (Gemini, Claude, Codex).",
+  "description": "FluxTrail: Open-source, local-first project memory and handoff trail for AI coding assistants.",
   "main": "index.js",
   "scripts": {
     "test": "node scripts/smoke-test.js"

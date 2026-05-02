@@ -2,12 +2,12 @@
 
 ## Reporting a Vulnerability
 
-We take the security of your project context and AI workflows seriously. If you discover a security vulnerability within Capsule Nexus, please do not open a public issue. Instead, report it privately to the maintainer.
+We take the security of your project context and AI workflows seriously. If you discover a security vulnerability within FluxTrail, please do not open a public issue. Instead, report it privately to the maintainer.
 
 ## Guidelines for Users
 
 ### 1. Local-First Privacy
-Capsule Nexus is designed to operate 100% locally. It stores memory in the `.capsule/` folder within your project. We recommend:
+FluxTrail is designed to operate 100% locally. It stores memory in the `.capsule/` folder within your project. We recommend:
 -   **Review your context files:** Always check the generated `GEMINI.md`, `CLAUDE.md`, and `AGENTS.md` before sharing your project repository or committing these files if they contain sensitive path names or proprietary logic.
 -   **Protect your secrets:** Never store raw API keys or passwords in your project's `memory.md`.
 
@@ -15,4 +15,4 @@ Capsule Nexus is designed to operate 100% locally. It stores memory in the `.cap
 The architectural mapping (via `graphify`) extracts structure from your source code. While this is performed locally, the resulting `graph.json` contains a map of your project's functions and relationships. Treat this file with the same level of security as your source code.
 
 ### 3. Public Commits
-By default, Capsule Nexus implements a **Git-Shield** feature to stage context files. If you are working on a public repository and wish to keep your AI context private, ensure you exclude the `.capsule/` directory from your public pushes.
+By default, FluxTrail implements a **Git-Shield** feature to stage context files. If you are working on a public repository and wish to keep your AI context private, ensure you exclude the `.capsule/` directory from your public pushes.

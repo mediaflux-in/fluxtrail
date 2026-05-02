@@ -1,7 +1,9 @@
 # NOTICE
 
 ## Credits
-Capsule Context CLI (Capsule Nexus) includes integration with the **Graphify** knowledge graph tool.
+FluxTrail is developed and maintained by **MediaFlux**. 
+
+It includes integration with the **Graphify** knowledge graph tool.
 
 ## Attribution
 - **Graphify:** Originally developed by Safi Shamsi (https://github.com/safishamsi/graphify).

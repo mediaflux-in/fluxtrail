@@ -5,7 +5,7 @@ import path from 'path';
 const TEST_DIR = path.join(process.cwd(), 'test-sandbox');
 
 async function runTest() {
-  console.log('🚀 Starting Capsule Nexus Smoke Tests...\n');
+  console.log('🚀 Starting FluxTrail Smoke Tests...\n');
 
   try {
     // Clean sandbox
@@ -17,7 +17,7 @@ async function runTest() {
     // 1. CLI Help Test
     console.log('Test 1: CLI Help output');
     const { stdout: helpOut } = await execa('node', ['src/index.js', '--help']);
-    if (helpOut.includes('Capsule Nexus')) {
+    if (helpOut.includes('FluxTrail')) {
       console.log('✅ Help verified branding.\n');
     } else {
       throw new Error('Branding missing in help output');
@@ -60,7 +60,7 @@ async function runTest() {
 
     // Clean up
     await fs.remove(TEST_DIR);
-    console.log('✨ All tests passed! Capsule Nexus is release-ready.');
+    console.log('✨ All tests passed! FluxTrail is release-ready.');
     process.exit(0);
   } catch (err) {
     console.error(`❌ Test failed: ${err.message}`);
