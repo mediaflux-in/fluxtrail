@@ -1,7 +1,7 @@
 {
   "name": "fluxtrail",
   "version": "1.0.0",
-  "description": "FluxTrail: Open-source, local-first project memory and handoff trail for AI coding assistants.",
+  "description": "Local-first project memory and handoff trail for AI coding assistants",
   "main": "index.js",
   "scripts": {
     "test": "node scripts/smoke-test.js"
@@ -19,9 +19,32 @@
     "agents",
     "handoff"
   ],
-  "author": "Sandeep",
+  "author": "MediaFlux",
   "license": "MIT",
   "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mediaflux/fluxtrail.git"
+  },
+  "homepage": "https://github.com/mediaflux/fluxtrail#readme",
+  "bugs": {
+    "url": "https://github.com/mediaflux/fluxtrail/issues"
+  },
+  "files": [
+    "src",
+    "scripts",
+    "docs/ARCHITECTURE.md",
+    "docs/NON_CODER_GUIDE.md",
+    "examples",
+    "README.md",
+    "LICENSE",
+    "NOTICE.md",
+    "CONTRIBUTING.md",
+    "SECURITY.md"
+  ],
   "bin": {
     "fluxtrail": "./src/index.js"
   },

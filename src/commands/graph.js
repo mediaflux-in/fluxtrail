@@ -1,5 +1,22 @@
-import { success, error, info } from '../lib/utils.js';
+import { success, error, info, warn } from '../lib/utils.js';
 import { getGraphifyFileStatus, getRawGraphifyReport, writeGraphSummary } from '../lib/storage.js';
+import { execa } from 'execa';
+
+/**
+ * Runs graphify . to build a project map.
+ */
+export async function build() {
+  try {
+    info('Running graphify . to build project map...');
+    await execa('graphify', ['.']);
+    success('Project map built successfully.');
+  } catch (err) {
+    warn('Graphify is not installed or failed to run.');
+    info('Install with:');
+    console.log('  python -m pip install graphifyy');
+    console.log('  graphify install');
+  }
+}
 
 /**
  * Checks for the presence of Graphify output files.

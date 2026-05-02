@@ -9,6 +9,8 @@ import { watch } from './commands/watch.js';
 import { status } from './commands/status.js';
 import { onboard } from './commands/onboard.js';
 import { continueProject } from './commands/continue.js';
+import { doctor } from './commands/doctor.js';
+import { setupFull } from './commands/setup.js';
 
 const program = new Command();
 
@@ -41,7 +43,47 @@ program
     }
   });
 
+program
+  .command('doctor')
+  .description('Diagnose and verify the system environment')
+  .action(async () => {
+    try {
+      await doctor();
+    } catch (err) {
+      error(err.message);
+      process.exit(1);
+    }
+  });
+
+const setupCommand = program.command('setup');
+
+setupCommand
+  .command('full')
+  .description('Configure the environment for full project-map mode')
+  .option('--dry-run', 'Run checks without making changes')
+  .action(async (options) => {
+    try {
+      await setupFull(options);
+    } catch (err) {
+      error(err.message);
+      process.exit(1);
+    }
+  });
+
 const graphCommand = program.command('graph');
+
+graphCommand
+  .command('build')
+  .description('Run graphify . to build a project map')
+  .action(async () => {
+    try {
+      const { build } = await import('./commands/graph.js');
+      await build();
+    } catch (err) {
+      error(err.message);
+      process.exit(1);
+    }
+  });
 
 graphCommand
   .command('status')
