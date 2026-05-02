@@ -59,7 +59,7 @@ export async function writeInitialState(projectName = path.basename(process.cwd(
   const filePath = path.join(process.cwd(), CAPSULE_DIR, 'state.json');
   const initialState = {
     projectName,
-    lastCLI: 'capsule-context-cli',
+    lastCLI: 'fluxtrail-cli',
     lastHandoff: null,
     initializedAt: new Date().toISOString()
   };

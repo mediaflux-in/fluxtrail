@@ -1,7 +1,7 @@
 import { isInitialized, archiveHandoff, writeHandoff, updateState, getGitStatus, gitShield } from '../lib/storage.js';
 import { success, error, info } from '../lib/utils.js';
 
-export async function capture(summary, cliName = 'capsule-context-cli') {
+export async function capture(summary, cliName = 'fluxtrail-cli') {
   if (!(await isInitialized())) {
     error('Project not initialized. Run "capsule init" first.');
     return;

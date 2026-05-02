@@ -13,13 +13,13 @@ import { continueProject } from './commands/continue.js';
 const program = new Command();
 
 program
-  .name('capsule-context')
+  .name('fluxtrail')
   .description('FluxTrail - Persistent project context and architectural mapping for AI assistants')
   .version('1.0.0');
 
 program
   .command('init')
-  .description('Initialize a new capsule context in the current directory')
+  .description('Initialize a new project context in the current directory')
   .action(async () => {
     try {
       await init();
@@ -31,7 +31,7 @@ program
 
 program
   .command('status')
-  .description('Check the status of the current capsule context')
+  .description('Check the status of the current project context')
   .action(async () => {
     try {
       await status();
@@ -85,7 +85,7 @@ program
 program
   .command('capture <summary>')
   .description('Capture the current project state into the capsule')
-  .option('--cli <name>', 'Specify the CLI name doing the capture', 'capsule-context-cli')
+  .option('--cli <name>', 'Specify the CLI name doing the capture', 'fluxtrail-cli')
   .action(async (summary, options) => {
     try {
       await capture(summary, options.cli);
@@ -97,7 +97,7 @@ program
 
 program
   .command('onboard')
-  .description('Onboard a new agent by providing the capsule context')
+  .description('Onboard a new agent by providing the project context')
   .action(async () => {
     try {
       await onboard();

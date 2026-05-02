@@ -9,7 +9,7 @@ export async function status() {
     const files = await getGraphifyFileStatus();
     
     if (!files.report && !files.json && !files.html) {
-      info('No Graphify output found. Run graphify first or use capsule-context sync if you want automatic mapping.');
+      info('No Graphify output found. Run graphify first or use fluxtrail sync if you want automatic mapping.');
       return;
     }
 

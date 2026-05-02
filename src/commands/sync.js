@@ -22,7 +22,7 @@ export async function sync(summary, options) {
       } catch (e2) {
         warn('Python was not found. Install Python or use the safe manual workflow:');
         console.log('  graphify .');
-        console.log('  capsule-context graph import');
+        console.log('  fluxtrail graph import');
       }
     }
 

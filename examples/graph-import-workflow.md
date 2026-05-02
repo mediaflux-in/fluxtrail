@@ -13,20 +13,20 @@ This example shows how to give your AI a "Brain Transplant" by importing your pr
 2.  **Verify the Files:**
     Make sure the report was generated.
     ```bash
-    capsule-context graph status
+    fluxtrail graph status
     ```
 
 3.  **Import to Capsule:**
     Bring the map into your persistent memory.
     ```bash
-    capsule-context graph import
+    fluxtrail graph import
     ```
 
 4.  **Sync and Continue:**
     Ensure the AI instructions are updated.
     ```bash
-    capsule-context sync "Added new payment module and updated architecture map."
-    capsule-context continue gemini
+    fluxtrail sync "Added new payment module and updated architecture map."
+    fluxtrail continue gemini
     ```
 
 ## Benefit

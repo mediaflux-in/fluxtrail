@@ -8,14 +8,14 @@ const CAPSULE_DIR = '.capsule';
 
 export async function status() {
   if (!(await isInitialized())) {
-    error('Capsule context not initialized. Run "capsule-context init" first.');
+    error('Project context not initialized. Run "fluxtrail init" first.');
     return;
   }
 
   const state = await getState();
   const recentFiles = await getRecentFiles();
 
-  console.log('\n' + chalk.bold.blue('--- Capsule Context Status ---'));
+  console.log('\n' + chalk.bold.blue('--- FluxTrail Status ---'));
   console.log(`${chalk.bold('Project:')} ${state.projectName}`);
   console.log(`${chalk.bold('Last CLI:')} ${state.lastCLI}`);
   console.log(`${chalk.bold('Last Handoff:')} ${state.lastHandoff || 'None'}`);

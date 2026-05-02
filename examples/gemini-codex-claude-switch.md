@@ -7,13 +7,13 @@ This example shows how to move from Gemini to Claude without re-explaining every
 1.  **Finish in Gemini:**
     You've been working in Gemini CLI. Before leaving:
     ```bash
-    capsule-context capture "Finished the CSS refactor for the hero section."
+    fluxtrail capture "Finished the CSS refactor for the hero section."
     ```
 
 2.  **Prep for Claude:**
     Tell Capsule you want to switch to Claude.
     ```bash
-    capsule-context continue claude
+    fluxtrail continue claude
     ```
 
 3.  **Start Claude:**

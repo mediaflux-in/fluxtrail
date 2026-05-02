@@ -8,7 +8,7 @@
 
 **FluxTrail is an open-source, local-first project memory and handoff trail for AI coding assistants.**
 
-FluxTrail is a local-first CLI tool (command: `capsule-context`) designed to maintain project continuity across different AI assistants (Gemini CLI, Claude Code, and Codex). It ensures that when you switch tools or reboot your PC, your AI knows exactly where you left off.
+FluxTrail is a local-first CLI tool (command: `fluxtrail`) designed to maintain project continuity across different AI assistants (Gemini CLI, Claude Code, and Codex). It ensures that when you switch tools or reboot your PC, your AI knows exactly where you left off.
 
 ## 🚀 Why FluxTrail?
 
@@ -33,7 +33,7 @@ npm link
 ### 1. Initialize
 Set up the context capsule in your project.
 ```bash
-capsule-context init
+fluxtrail init
 ```
 
 ### 2. Manual Workflow (Modular)
@@ -43,20 +43,20 @@ Safe, modular, and human-controlled.
 graphify .
 
 # 2. Check and import the map into the capsule
-capsule-context graph status
-capsule-context graph import
+fluxtrail graph status
+fluxtrail graph import
 
 # 3. Capture your progress and Git state
-capsule-context capture "Implemented the login flow" --cli "gemini"
+fluxtrail capture "Implemented the login flow" --cli "gemini"
 
 # 4. Inject context into your AI assistant
-capsule-context continue gemini
+fluxtrail continue gemini
 ```
 
 ### 3. Advanced Workflow (Power Sync)
 Update everything (Architecture + Tasks + Instructions) in one shot.
 ```bash
-capsule-context sync "Completed API integration"
+fluxtrail sync "Completed API integration"
 ```
 
 ## 🧠 AI Compatibility

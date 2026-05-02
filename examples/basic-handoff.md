@@ -9,7 +9,7 @@ This example shows how to record a simple task update so the next AI knows what 
 
 2.  **Capture the progress:**
     ```bash
-    capsule-context capture "Fixed the email validation bug. Added unit tests for invalid domains."
+    fluxtrail capture "Fixed the email validation bug. Added unit tests for invalid domains."
     ```
 
 3.  **The Result:**

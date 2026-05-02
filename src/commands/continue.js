@@ -15,7 +15,7 @@ const MARKER_END = '<!-- CAPSULE-CLI:END -->';
 
 export async function continueProject(target) {
   if (!(await isInitialized())) {
-    error('Project not initialized. Run "capsule-context init" first.');
+    error('Project not initialized. Run "fluxtrail init" first.');
     return;
   }
 
@@ -51,7 +51,7 @@ export async function continueProject(target) {
     }
 
     await fs.writeFile(filePath, newContent);
-    success(`Successfully updated ${fileName} with latest capsule context.`);
+    success(`Successfully updated ${fileName} with latest project context.`);
   } catch (err) {
     error(`Failed to update ${fileName}: ${err.message}`);
   }

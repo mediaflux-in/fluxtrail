@@ -14,7 +14,7 @@ export async function init() {
   }
 
   try {
-    info('Initializing new capsule context...');
+    info('Initializing new project context...');
     
     await ensureCapsuleDir();
     await writeInitialState();
@@ -23,6 +23,6 @@ export async function init() {
 
     success('Successfully initialized .capsule directory and initial files.');
   } catch (err) {
-    throw new Error(`Failed to initialize capsule context: ${err.message}`);
+    throw new Error(`Failed to initialize project context: ${err.message}`);
   }
 }

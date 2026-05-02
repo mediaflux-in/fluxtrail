@@ -4,7 +4,7 @@ import { info, error } from '../lib/utils.js';
 
 export async function watch() {
   if (!(await isInitialized())) {
-    error('Project not initialized. Run `capsule-context init` first.');
+    error('Project not initialized. Run `fluxtrail init` first.');
     return;
   }
 

@@ -5,7 +5,7 @@ import { error, info } from '../lib/utils.js';
 
 export async function onboard() {
   if (!(await isInitialized())) {
-    error('Capsule context not initialized. Run "capsule-context init" first.');
+    error('Project context not initialized. Run "fluxtrail init" first.');
     return;
   }
 

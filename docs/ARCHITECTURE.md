@@ -19,12 +19,12 @@ FluxTrail is a "Repo-First" context management system. It ensures that AI agents
 - **Zero-Cost:** Strictly uses local CPU parsing for code mapping; no LLM tokens required for structural analysis.
 
 ### 3. Handoff Layer (Context Capture)
-- **Logic:** `capsule-context capture`.
+- **Logic:** `fluxtrail capture`.
 - **Function:** Combines human-written summaries with automated Git status detection.
 - **Automation:** Uses Git hooks to automatically stage context files, ensuring "Immortality" via the project's history.
 
 ### 4. AI Adapter Layer (Instruction Injection)
-- **Logic:** `capsule-context continue [target]`.
+- **Logic:** `fluxtrail continue [target]`.
 - **Function:** Injects the combined memory and architectural map into assistant-specific instruction files:
   - `GEMINI.md` (Gemini CLI)
   - `CLAUDE.md` (Claude Code)
@@ -35,13 +35,13 @@ FluxTrail is a "Repo-First" context management system. It ensures that AI agents
 ### Safe Manual Workflow (Modular)
 Designed for predictable, human-controlled updates.
 1. `graphify .` -> Build the map.
-2. `capsule-context graph import` -> Bring the map into the capsule.
-3. `capsule-context capture "..."` -> Record task progress.
-4. `capsule-context continue gemini` -> Update the AI's instructions.
+2. `fluxtrail graph import` -> Bring the map into the capsule.
+3. `fluxtrail capture "..."` -> Record task progress.
+4. `fluxtrail continue gemini` -> Update the AI's instructions.
 
 ### Advanced Sync Workflow (Nexus Engine)
 A single "Power Button" for speed.
-1. `capsule-context sync "..."` -> Automatically runs Graphify, captures Git state, and updates all instruction files in one step.
+1. `fluxtrail sync "..."` -> Automatically runs Graphify, captures Git state, and updates all instruction files in one step.
 
 ## File Structure
 ```text

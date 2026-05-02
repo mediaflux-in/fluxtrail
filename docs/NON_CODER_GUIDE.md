@@ -10,21 +10,21 @@ Think of FluxTrail as a **"Memory Card"** for your AI. When you stop talking to 
 ### Step 1: Tell the AI you are starting
 When you start working on a project, open your terminal in that folder and type:
 ```bash
-capsule-context status
+fluxtrail status
 ```
 This checks if the memory is already there.
 
 ### Step 2: Save your progress
 Before you turn off your computer or switch to a different AI tool, save your "game" by typing:
 ```bash
-capsule-context sync "I finished the first page design"
+fluxtrail sync "I finished the first page design"
 ```
 *(Replace the text in quotes with what you actually did.)*
 
 ### Step 3: Switch tools
 If you want to use a different AI tool (like switching from Gemini to Claude), run:
 ```bash
-capsule-context continue claude
+fluxtrail continue claude
 ```
 Then, when you open Claude, it will instantly see your notes and be ready to help.
 
