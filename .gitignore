@@ -1,0 +1,7 @@
+node_modules/
+test-env/
+.capsule/
+graphify-out/
+.env
+*.log
+.DS_Store
