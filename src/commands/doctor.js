@@ -2,6 +2,23 @@ import { execa } from 'execa';
 import chalk from 'chalk';
 import { info, success, warn, error } from '../lib/utils.js';
 
+/**
+ * Robustly checks if a command exists in the system PATH.
+ */
+async function commandExists(cmd) {
+  try {
+    if (process.platform === 'win32') {
+      const { stdout } = await execa('where', [cmd], { reject: false });
+      return stdout.trim().length > 0;
+    } else {
+      const { stdout } = await execa('which', [cmd], { reject: false });
+      return stdout.trim().length > 0;
+    }
+  } catch (e) {
+    return false;
+  }
+}
+
 export async function doctor() {
   info('FluxTrail Doctor - Checking system environment...\n');
 
@@ -43,9 +60,13 @@ export async function doctor() {
   }
 
   try {
-    const { stdout } = await execa('git', ['--version']);
-    console.log(`${chalk.green('✔')} ${stdout.trim()}`);
-    required.git = true;
+    if (await commandExists('git')) {
+      const { stdout } = await execa('git', ['--version']);
+      console.log(`${chalk.green('✔')} ${stdout.trim()}`);
+      required.git = true;
+    } else {
+      console.log(`${chalk.red('✘')} Git not found`);
+    }
   } catch (e) {
     console.log(`${chalk.red('✘')} Git not found`);
   }
@@ -54,31 +75,37 @@ export async function doctor() {
 
   // Recommended Checks
   try {
-    await execa('python', ['--version']);
-    console.log(`${chalk.green('✔')} Python found`);
-    recommended.python = true;
-  } catch (e) {
-    try {
-      await execa('python3', ['--version']);
+    if (await commandExists('python')) {
+      console.log(`${chalk.green('✔')} Python found`);
+      recommended.python = true;
+    } else if (await commandExists('python3')) {
       console.log(`${chalk.green('✔')} Python 3 found`);
       recommended.python = true;
-    } catch (e2) {
+    } else {
       console.log(`${chalk.yellow('⚠')} Python not found (recommended for Graphify)`);
     }
+  } catch (e) {
+    console.log(`${chalk.yellow('⚠')} Python not found (recommended for Graphify)`);
   }
 
   try {
-    await execa('pip', ['--version']);
-    console.log(`${chalk.green('✔')} pip found`);
-    recommended.pip = true;
+    if (await commandExists('pip')) {
+      console.log(`${chalk.green('✔')} pip found`);
+      recommended.pip = true;
+    } else {
+      console.log(`${chalk.yellow('⚠')} pip not found`);
+    }
   } catch (e) {
     console.log(`${chalk.yellow('⚠')} pip not found`);
   }
 
   try {
-    await execa('graphify', ['--version']);
-    console.log(`${chalk.green('✔')} Graphify CLI found`);
-    recommended.graphify = true;
+    if (await commandExists('graphify')) {
+      console.log(`${chalk.green('✔')} Graphify CLI found`);
+      recommended.graphify = true;
+    } else {
+      console.log(`${chalk.yellow('⚠')} Graphify CLI not found (recommended for project maps)`);
+    }
   } catch (e) {
     console.log(`${chalk.yellow('⚠')} Graphify CLI not found (recommended for project maps)`);
   }
@@ -92,9 +119,12 @@ export async function doctor() {
 
   for (const tool of aiTools) {
     try {
-      await execa(tool.cmd, ['--version']);
-      console.log(`${chalk.green('✔')} ${tool.name} found`);
-      recommended[tool.key] = true;
+      if (await commandExists(tool.cmd)) {
+        console.log(`${chalk.green('✔')} ${tool.name} found`);
+        recommended[tool.key] = true;
+      } else {
+        console.log(`${chalk.blue('ℹ')} ${tool.name} not detected (optional)`);
+      }
     } catch (e) {
       console.log(`${chalk.blue('ℹ')} ${tool.name} not detected (optional)`);
     }
