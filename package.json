@@ -1,5 +1,5 @@
 {
-  "name": "fluxtrail",
+  "name": "@mediaflux/fluxtrail",
   "version": "1.0.0",
   "description": "Local-first project memory and handoff trail for AI coding assistants",
   "main": "index.js",
@@ -27,11 +27,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mediaflux/fluxtrail.git"
+    "url": "git+https://github.com/mediaflux-in/fluxtrail.git"
   },
-  "homepage": "https://github.com/mediaflux/fluxtrail#readme",
+  "homepage": "https://mediaflux.in/fluxtrail",
   "bugs": {
-    "url": "https://github.com/mediaflux/fluxtrail/issues"
+    "url": "https://github.com/mediaflux-in/fluxtrail/issues"
   },
   "files": [
     "src",
@@ -46,7 +46,7 @@
     "SECURITY.md"
   ],
   "bin": {
-    "fluxtrail": "./src/index.js"
+    "fluxtrail": "src/index.js"
   },
   "dependencies": {
     "chalk": "^5.6.2",

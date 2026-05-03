@@ -23,7 +23,7 @@ LLMs are stateless. When a session ends, the context is lost. FluxTrail acts as 
 ## 📦 Installation
 
 ```bash
-npm install -g fluxtrail
+npm install -g @mediaflux/fluxtrail
 ```
 
 ## 🛠 Quick Start

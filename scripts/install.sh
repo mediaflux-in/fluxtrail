@@ -31,7 +31,7 @@ if [[ $confirm != "y" ]]; then
 fi
 
 echo "Installing fluxtrail..."
-sudo npm install -g fluxtrail
+sudo npm install -g @mediaflux/fluxtrail
 
 if [ $? -eq 0 ]; then
     echo -e "\n\033[0;32m✨ FluxTrail installed successfully!\033[0m"
