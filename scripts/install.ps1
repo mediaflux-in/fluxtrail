@@ -29,7 +29,7 @@ if ($confirm -ne 'y') {
 }
 
 Write-Host "Installing fluxtrail..."
-npm install -g @mediaflux/fluxtrail
+npm install -g @mediaflux-in/fluxtrail
 
 if ($LASTEXITCODE -eq 0) {
     Write-Host "`n✨ FluxTrail installed successfully!" -ForegroundColor Green

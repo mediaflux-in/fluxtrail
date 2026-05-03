@@ -1,5 +1,5 @@
 {
-  "name": "@mediaflux/fluxtrail",
+  "name": "@mediaflux-in/fluxtrail",
   "version": "1.0.0",
   "description": "Local-first project memory and handoff trail for AI coding assistants",
   "main": "index.js",
